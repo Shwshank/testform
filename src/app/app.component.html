@@ -1,11 +1,109 @@
 <!--The whole content below can be removed with the new code.-->
+<style>
+  input{
+    width: 550px;
+    border : 0px;
+    border-bottom: 2px solid #337ab7 !important;
+    border-radius: 0px;
+  }
+</style>
 <div style="text-align:center">
   <h1>
     Welcome to {{title}}!!
   </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
+  <img height="200" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
 </div>
-<h2>Here are some links to help you start: </h2>
+
+<div class="container">
+  <ul class="nav nav-pills">
+
+    <li class="active"><a data-toggle="pill" href="#home">Category</a></li>
+    <li><a data-toggle="pill" href="#menu1">Sub-Category</a></li>
+    <li><a data-toggle="pill" href="#menu2">Sub-Sub-Category</a></li>
+
+  </ul>
+
+  <div class="tab-content">
+
+    <div id="home" class="tab-pane fade in active">
+      <h3>Category</h3>
+      <br/>
+      <div class="form-group">
+
+        <input [(ngModel)]="c1_data1" placeholder="Category Name" type="text" class="form-control" name="c1-data1">
+
+      </div>
+
+      <div class="form-group">
+
+        <input [(ngModel)]="c1_data2" placeholder="Category Type" type="text" class="form-control" name="c1-data2">
+
+      </div>
+      <!-- <button style="margin-left:450px;" type="button" class="btn btn-success"  href="#menu1"> <i class="fa fa-paper-plane" aria-hidden="true"></i> Next</button> -->
+    </div>
+
+    <div id="menu1" class="tab-pane fade">
+      <h3>Sub-Category</h3>
+      <br/>
+
+      <div class="form-group">
+
+        <input [(ngModel)]="c1_data1" placeholder="Category Name" type="text" class="form-control" name="c1-data1">
+
+      </div>
+
+      <div class="form-group">
+
+        <input [(ngModel)]="c1_data2" placeholder="Category Type" type="text" class="form-control" name="c1-data2">
+
+      </div>
+
+      <div class="form-group">
+
+        <input [(ngModel)]="c2_data1" placeholder="Sub-Category Name" type="text" class="form-control" name="c2-data1">
+
+      </div>
+
+
+    </div>
+
+    <div id="menu2" class="tab-pane fade">
+      <h3>Sub-Sub-Category</h3>
+      <br/>
+
+      <div class="form-group">
+
+        <input [(ngModel)]="c1_data1" placeholder="Category Name" type="text" class="form-control" name="c1-data1">
+
+      </div>
+
+      <div class="form-group">
+
+        <input [(ngModel)]="c1_data2" placeholder="Category Type" type="text" class="form-control" name="c1-data2">
+
+      </div>
+
+      <div class="form-group">
+
+        <input [(ngModel)]="c2_data1" placeholder="Sub-Category Name" type="text" class="form-control" name="c2-data1">
+
+      </div>
+
+      <div class="form-group">
+
+        <input [(ngModel)]="c3_data1" placeholder="Sub-Sub-Category Name" type="text" class="form-control" name="c3-data1">
+
+      </div>
+      <button style="margin-left:450px;" type="button" class="btn btn-success"  href="#menu1"> <i class="fa fa-paper-plane" aria-hidden="true"></i> Submit</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- <h2>Here are some links to help you start: </h2>
 <ul>
   <li>
     <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
@@ -16,5 +114,4 @@
   <li>
     <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
   </li>
-</ul>
-
+</ul> -->
